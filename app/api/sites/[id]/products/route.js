@@ -322,8 +322,8 @@ export async function POST(request, { params }) {
           const insertSql = `
             INSERT INTO products (
               title, slug, description, content, price, compare_price, 
-              category, brand, sku, image_url, gallery, compatible_models, features, is_active, is_featured
-            ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, 0)
+              category, brand, sku, image_url, gallery, compatible_models, features, affiliate_link, is_active, is_featured
+            ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, 0)
           `;
           const insertParams = [
             p.title,
@@ -332,13 +332,14 @@ export async function POST(request, { params }) {
             p.content || '',
             p.price,
             p.comparePrice,
-            p.category || 'Water Filters',
+            p.category || 'apparel',
             p.brand || 'Generic',
             p.sku,
             p.imageUrl,
             p.gallery || JSON.stringify([p.imageUrl]),
             p.compatibleModels || '[]',
             p.features || '[]',
+            p.affiliate_link || p.link || '',
             publishDirectly ? 1 : 0
           ];
           await executeSQLOnD1(apiToken, accountId, site.d1_database_id, insertSql, insertParams);

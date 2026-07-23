@@ -86,7 +86,7 @@ const translations = {
     add_site_title: "配置并生成独立站",
     site_key_name: "站点标识 (Key Name)",
     custom_domain_optional: "自定义域名 (可选)",
-    site_template: "网站模板 (Template Repository)",
+    site_template: "主题/类目 (Theme/Category)",
     select_account: "选择 Cloudflare 账户",
     primary_color: "主色调",
     accent_color: "辅助色",
@@ -160,7 +160,7 @@ const translations = {
     add_site_title: "Configure New Site",
     site_key_name: "Site Key Name",
     custom_domain_optional: "Custom Domain (Optional)",
-    site_template: "Site Template (Repository)",
+    site_template: "Theme / Category",
     select_account: "Select Account",
     primary_color: "Primary Color",
     accent_color: "Accent Color",
@@ -558,7 +558,7 @@ export default function DashboardPage() {
     accent_color: '#00b4d8',
     seo_title: '',
     seo_description: '',
-    template: 'sitespro',
+    template: 'apparel',
     email_forwarding: 0,
     paypal_client_id: '',
     paypal_client_secret: '',
@@ -576,7 +576,7 @@ export default function DashboardPage() {
     accent_color: '#00b4d8',
     seo_title: '',
     seo_description: '',
-    template: 'sitespro',
+    template: 'apparel',
     email_forwarding: 0,
     paypal_client_id: '',
     paypal_client_secret: '',
@@ -2688,7 +2688,16 @@ export default function DashboardPage() {
                   className="w-full px-4 py-2.5 bg-input-bg border border-input-border rounded-xl focus:border-blue-500 outline-none text-sm text-text-heading"
                   required
                 >
-                  <option value="sitespro">SitesPro Multi-Theme Engine (Next.js)</option>
+                  <option value="apparel">{lang === 'zh' ? '服装 (Apparel & Fashion) - 默认' : 'Apparel & Fashion (Default)'}</option>
+                  <option value="digital">{lang === 'zh' ? '数码 (Electronics & Digital)' : 'Electronics & Digital'}</option>
+                  <option value="home">{lang === 'zh' ? '家居 (Home & Living)' : 'Home & Living'}</option>
+                  <option value="services">{lang === 'zh' ? '服务 (Services & Subscriptions)' : 'Services & Subscriptions'}</option>
+                  <option value="beauty">{lang === 'zh' ? '美妆 (Beauty & Personal Care)' : 'Beauty & Personal Care'}</option>
+                  <option value="baby">{lang === 'zh' ? '母婴 (Baby & Toys)' : 'Baby & Toys'}</option>
+                  <option value="sports">{lang === 'zh' ? '运动 (Sports & Outdoors)' : 'Sports & Outdoors'}</option>
+                  <option value="food">{lang === 'zh' ? '食品 (Food & Beverages)' : 'Food & Beverages'}</option>
+                  <option value="auto">{lang === 'zh' ? '汽车 (Automotive & Accessories)' : 'Automotive & Accessories'}</option>
+                  <option value="pets">{lang === 'zh' ? '宠物 (Pet Supplies)' : 'Pet Supplies'}</option>
                 </select>
               </div>
 
@@ -2883,7 +2892,16 @@ export default function DashboardPage() {
                   className="w-full px-4 py-2.5 bg-input-bg border border-input-border rounded-xl focus:border-blue-500 outline-none text-sm text-text-heading"
                   required
                 >
-                  <option value="sitespro">SitesPro Multi-Theme Engine (Next.js)</option>
+                  <option value="apparel">{lang === 'zh' ? '服装 (Apparel & Fashion) - 默认' : 'Apparel & Fashion (Default)'}</option>
+                  <option value="digital">{lang === 'zh' ? '数码 (Electronics & Digital)' : 'Electronics & Digital'}</option>
+                  <option value="home">{lang === 'zh' ? '家居 (Home & Living)' : 'Home & Living'}</option>
+                  <option value="services">{lang === 'zh' ? '服务 (Services & Subscriptions)' : 'Services & Subscriptions'}</option>
+                  <option value="beauty">{lang === 'zh' ? '美妆 (Beauty & Personal Care)' : 'Beauty & Personal Care'}</option>
+                  <option value="baby">{lang === 'zh' ? '母婴 (Baby & Toys)' : 'Baby & Toys'}</option>
+                  <option value="sports">{lang === 'zh' ? '运动 (Sports & Outdoors)' : 'Sports & Outdoors'}</option>
+                  <option value="food">{lang === 'zh' ? '食品 (Food & Beverages)' : 'Food & Beverages'}</option>
+                  <option value="auto">{lang === 'zh' ? '汽车 (Automotive & Accessories)' : 'Automotive & Accessories'}</option>
+                  <option value="pets">{lang === 'zh' ? '宠物 (Pet Supplies)' : 'Pet Supplies'}</option>
                 </select>
               </div>
 
