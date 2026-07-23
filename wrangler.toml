@@ -1,0 +1,9 @@
+name = "sitesproadmin"
+compatibility_date = "2024-09-23"
+compatibility_flags = ["nodejs_compat"]
+pages_build_output_dir = ".vercel/output/static"
+
+[[d1_databases]]
+binding = "MGR_DB"
+database_name = "sitespro-mgr-db"
+database_id = "dfdce58b-06fb-445a-9acf-7c813a6c0394"
