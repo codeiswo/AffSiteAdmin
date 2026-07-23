@@ -255,6 +255,7 @@ export default function DashboardPage() {
   const [loading, setLoading] = useState(true);
   const [isDark, setIsDark] = useState(false);
   const [lang, setLang] = useState('zh');
+  const [mounted, setMounted] = useState(false);
 
   // Data states
   const [sites, setSites] = useState([]);
@@ -642,6 +643,7 @@ export default function DashboardPage() {
     // Language initialization (defaulting to Chinese 'zh')
     const storedLang = localStorage.getItem('sitespro_lang');
     setLang(storedLang === 'en' ? 'en' : 'zh');
+    setMounted(true);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
@@ -2126,13 +2128,13 @@ export default function DashboardPage() {
                             <td className="px-6 py-4 font-semibold">{kw.keyword}</td>
                             <td className="px-6 py-4 font-mono font-medium">{kw.impressions}</td>
                             <td className="px-6 py-4 text-text-muted font-mono text-xs">
-                              {new Date(kw.created_at).toLocaleDateString(lang === 'zh' ? 'zh-CN' : 'en-US', {
+                              {mounted ? new Date(kw.created_at).toLocaleDateString(lang === 'zh' ? 'zh-CN' : 'en-US', {
                                 year: 'numeric',
                                 month: '2-digit',
                                 day: '2-digit',
                                 hour: '2-digit',
                                 minute: '2-digit'
-                              })}
+                              }) : ''}
                             </td>
                             <td className="px-6 py-4">
                               {kw.usage_count > 0 ? (
@@ -3028,7 +3030,7 @@ export default function DashboardPage() {
                 deployLogs.map((log, index) => (
                   <div key={log.id} className="flex items-start gap-3">
                     <span className="text-text-muted shrink-0">
-                      {new Date(log.created_at).toLocaleTimeString()}
+                      {mounted ? new Date(log.created_at).toLocaleTimeString() : ''}
                     </span>
 
                     {/* Step Icon */}
