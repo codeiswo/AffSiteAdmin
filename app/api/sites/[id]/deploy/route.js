@@ -71,24 +71,24 @@ export async function POST(request, { params }) {
       // 动态注入自定义参数修改 SQL 中的设置
       let seedSql = childSiteSqlTemplate;
       seedSql = seedSql.replace(
-        "INSERT OR IGNORE INTO settings (key, value) VALUES ('site_name', 'FiltersPro');",
+        "INSERT OR IGNORE INTO settings (key, value) VALUES ('site_name', 'AffSite Deals');",
         `INSERT OR IGNORE INTO settings (key, value) VALUES ('site_name', '${site.seo_title.split('-')[0].trim()}');`
       );
       const siteDomain = site.domain || `${pagesProject}.pages.dev`;
       seedSql = seedSql.replace(
-        "INSERT OR IGNORE INTO settings (key, value) VALUES ('site_url', 'https://www.filterspro.com');",
+        "INSERT OR IGNORE INTO settings (key, value) VALUES ('site_url', 'https://www.affsite.com');",
         `INSERT OR IGNORE INTO settings (key, value) VALUES ('site_url', 'https://${siteDomain}');`
       );
       seedSql = seedSql.replace(
-        "INSERT OR IGNORE INTO settings (key, value) VALUES ('site_email', 'info@filterspro.com');",
+        "INSERT OR IGNORE INTO settings (key, value) VALUES ('site_email', 'info@affsite.com');",
         `INSERT OR IGNORE INTO settings (key, value) VALUES ('site_email', 'info@${siteDomain}');`
       );
       seedSql = seedSql.replace(
-        "INSERT OR IGNORE INTO settings (key, value) VALUES ('meta_title', 'FiltersPro - Premium Refrigerator Water Filter Replacements');",
+        "INSERT OR IGNORE INTO settings (key, value) VALUES ('meta_title', 'AffSite Deals - Curated Fashion & Multi-Category Cashback Coupons');",
         `INSERT OR IGNORE INTO settings (key, value) VALUES ('meta_title', '${site.seo_title}');`
       );
       seedSql = seedSql.replace(
-        "INSERT OR IGNORE INTO settings (key, value) VALUES ('meta_description', 'Shop premium refrigerator water filter replacements for all major brands. NSF certified, easy installation, pure clean water for your family.');",
+        "INSERT OR IGNORE INTO settings (key, value) VALUES ('meta_description', 'Discover top cashback deals, coupons, and discounts across Apparel, Electronics, Home, and more. Shop partner brands and save.');",
         `INSERT OR IGNORE INTO settings (key, value) VALUES ('meta_description', '${site.seo_description}');`
       );
 

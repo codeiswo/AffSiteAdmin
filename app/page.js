@@ -1730,7 +1730,7 @@ export default function DashboardPage() {
                   <input
                     type="text"
                     required
-                    placeholder="e.g. everydrop water filters"
+                    placeholder="e.g. fashion cashback deals"
                     value={keywordInput}
                     onChange={e => setKeywordInput(e.target.value)}
                     className="w-full px-4 py-2.5 bg-input-bg border border-input-border rounded-xl focus:border-blue-500 outline-none text-sm text-text-heading font-medium"
@@ -2190,7 +2190,7 @@ export default function DashboardPage() {
                     <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-text-muted" />
                     <input
                       type="text"
-                      placeholder={lang === 'zh' ? '输入 Amazon 搜索关键词，例如: rpwfe ge refrigerator filter' : 'Enter Amazon search query, e.g. rpwfe ge refrigerator filter'}
+                      placeholder={lang === 'zh' ? '输入 Amazon 搜索关键词，例如: luxury fashion coat' : 'Enter Amazon search query, e.g. luxury fashion coat'}
                       value={asinSearchQuery}
                       onChange={e => setAsinSearchQuery(e.target.value)}
                       className="w-full pl-12 pr-10 py-3 bg-input-bg border border-input-border rounded-2xl focus:border-blue-500 outline-none text-sm text-text-heading font-medium"
@@ -2599,7 +2599,7 @@ export default function DashboardPage() {
 
                   <input
                     type="text"
-                    placeholder="e.g. samsung-filters"
+                    placeholder="e.g. fashion-rebates"
                     value={siteForm.name}
                     onChange={e => setSiteForm(prev => ({ ...prev, name: e.target.value }))}
                     className="w-full px-4 py-2.5 bg-input-bg border border-input-border rounded-xl focus:border-blue-500 outline-none text-sm text-text-heading"
@@ -2610,7 +2610,7 @@ export default function DashboardPage() {
                   <label className="text-xs text-text-muted font-semibold uppercase">{t('custom_domain_optional')}</label>
                   <input
                     type="text"
-                    placeholder="samsungfilters.com"
+                    placeholder="affsitefashion.com"
                     value={siteForm.domain}
                     onChange={e => setSiteForm(prev => ({ ...prev, domain: e.target.value }))}
                     className="w-full px-4 py-2.5 bg-input-bg border border-input-border rounded-xl focus:border-blue-500 outline-none text-sm text-text-heading"
@@ -2674,7 +2674,7 @@ export default function DashboardPage() {
                 <label className="text-xs text-text-muted font-semibold uppercase">{t('seo_title')}</label>
                 <input
                   type="text"
-                  placeholder="e.g. Samsung DA29-00020B Replacement | Pure Filters Store"
+                  placeholder="e.g. Classic Trench Coat & Fashion Deals | AffSite Store"
                   value={siteForm.seo_title}
                   onChange={e => setSiteForm(prev => ({ ...prev, seo_title: e.target.value }))}
                   className="w-full px-4 py-2.5 bg-input-bg border border-input-border rounded-xl focus:border-blue-500 outline-none text-sm text-text-heading"
@@ -3411,7 +3411,7 @@ export default function DashboardPage() {
                           </td>
                           <td className="px-4 py-3.5">
                             <div className="font-medium truncate max-w-[140px]">{p.brand || 'Generic'}</div>
-                            <div className="text-[10px] text-text-muted truncate max-w-[140px] mt-0.5">{p.category || 'Filters'}</div>
+                            <div className="text-[10px] text-text-muted truncate max-w-[140px] mt-0.5">{p.category || 'Apparel'}</div>
                           </td>
                           <td className="px-4 py-3.5 font-semibold text-blue-500">
                             ${p.price?.toFixed(2)}
