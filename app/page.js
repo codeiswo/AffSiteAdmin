@@ -770,6 +770,7 @@ export default function DashboardPage() {
       seo_description: site.seo_description || '',
       template: site.template || 'sitespro',
       email_forwarding: site.email_forwarding || 0,
+      r2_storage_mode: site.r2_storage_mode || 'default_r2',
       paypal_client_id: site.paypal_client_id || '',
       paypal_client_secret: site.paypal_client_secret || '',
       paypal_mode: site.paypal_mode || 'sandbox',
