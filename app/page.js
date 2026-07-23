@@ -2731,6 +2731,23 @@ export default function DashboardPage() {
                 </p>
               </div>
 
+              <div className="space-y-1.5">
+                <label className="text-xs text-text-muted font-semibold uppercase">
+                  {lang === 'zh' ? '图片存储模式 (Cloudflare R2 Storage Mode)' : 'Image R2 Storage Mode'}
+                </label>
+                <select
+                  value={siteForm.r2_storage_mode || 'default_r2'}
+                  onChange={e => setSiteForm(prev => ({ ...prev, r2_storage_mode: e.target.value }))}
+                  className="w-full px-4 py-2.5 bg-input-bg border border-input-border rounded-xl focus:border-blue-500 outline-none text-sm text-text-heading"
+                >
+                  <option value="default_r2">{lang === 'zh' ? '使用默认 Cloudflare R2 (Master Control Shared R2)' : 'Master Control Shared Cloudflare R2 (Default)'}</option>
+                  <option value="child_r2">{lang === 'zh' ? '使用部署网站对应的 Cloudflare R2 (Child Site Dedicated R2)' : 'Child Site Dedicated Cloudflare R2 Bucket'}</option>
+                </select>
+                <p className="text-[11px] text-text-muted">
+                  {lang === 'zh' ? '控制前后台模块自定义上传图片的默认存储位置。' : 'Controls where custom uploaded module images are stored.'}
+                </p>
+              </div>
+
               <div className="flex items-center gap-2 py-1">
                 <input
                   type="checkbox"
@@ -2946,6 +2963,20 @@ export default function DashboardPage() {
                 <label htmlFor="edit_email_forwarding" className="text-sm font-semibold text-text-heading cursor-pointer">
                   {lang === 'zh' ? '启用邮件转发 (info@您的域名 -> 默认转发邮箱)' : 'Enable Email Forwarding (info@yourdomain -> global forwarding email)'}
                 </label>
+              </div>
+
+              <div className="space-y-1.5">
+                <label className="text-xs text-text-muted font-semibold uppercase">
+                  {lang === 'zh' ? '图片存储模式 (Cloudflare R2 Storage Mode)' : 'Image R2 Storage Mode'}
+                </label>
+                <select
+                  value={editingSiteForm.r2_storage_mode || 'default_r2'}
+                  onChange={e => setEditingSiteForm(prev => ({ ...prev, r2_storage_mode: e.target.value }))}
+                  className="w-full px-4 py-2.5 bg-input-bg border border-input-border rounded-xl focus:border-blue-500 outline-none text-sm text-text-heading"
+                >
+                  <option value="default_r2">{lang === 'zh' ? '使用默认 Cloudflare R2 (Master Control Shared R2)' : 'Master Control Shared Cloudflare R2 (Default)'}</option>
+                  <option value="child_r2">{lang === 'zh' ? '使用部署网站对应的 Cloudflare R2 (Child Site Dedicated R2)' : 'Child Site Dedicated Cloudflare R2 Bucket'}</option>
+                </select>
               </div>
 
               {/* PayPal Settings section */}
