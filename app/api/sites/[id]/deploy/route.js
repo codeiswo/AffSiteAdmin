@@ -204,8 +204,8 @@ export async function POST(request, { params }) {
         // 获取域名的 Zone ID
         const zoneId = await getZoneIdByDomain(apiToken, site.domain);
         
-        // 获取系统设定的目标邮箱，如果没有，则默认转发到 codeiswo@outlook.com
-        const forwardDest = (await getMgrSetting('default_forward_email')) || 'codeiswo@outlook.com';
+        // 获取系统设定的目标邮箱，如果没有，则默认转发到 codeisworld@gmail.com
+        const forwardDest = (await getMgrSetting('default_forward_email')) || 'codeisworld@gmail.com';
         
         await setupEmailForwarding(apiToken, zoneId, site.domain, forwardDest);
         await addDeployLog(siteId, 'setup_email', 'success', `Email forwarding configured: info@${site.domain} -> ${forwardDest}`);
