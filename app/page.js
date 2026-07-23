@@ -2690,16 +2690,16 @@ export default function DashboardPage() {
                   className="w-full px-4 py-2.5 bg-input-bg border border-input-border rounded-xl focus:border-blue-500 outline-none text-sm text-text-heading"
                   required
                 >
-                  <option value="apparel">{lang === 'zh' ? '服装 (Apparel & Fashion) - 默认' : 'Apparel & Fashion (Default)'}</option>
-                  <option value="digital">{lang === 'zh' ? '数码 (Electronics & Digital)' : 'Electronics & Digital'}</option>
-                  <option value="home">{lang === 'zh' ? '家居 (Home & Living)' : 'Home & Living'}</option>
-                  <option value="services">{lang === 'zh' ? '服务 (Services & Subscriptions)' : 'Services & Subscriptions'}</option>
-                  <option value="beauty">{lang === 'zh' ? '美妆 (Beauty & Personal Care)' : 'Beauty & Personal Care'}</option>
-                  <option value="baby">{lang === 'zh' ? '母婴 (Baby & Toys)' : 'Baby & Toys'}</option>
-                  <option value="sports">{lang === 'zh' ? '运动 (Sports & Outdoors)' : 'Sports & Outdoors'}</option>
-                  <option value="food">{lang === 'zh' ? '食品 (Food & Beverages)' : 'Food & Beverages'}</option>
-                  <option value="auto">{lang === 'zh' ? '汽车 (Automotive & Accessories)' : 'Automotive & Accessories'}</option>
-                  <option value="pets">{lang === 'zh' ? '宠物 (Pet Supplies)' : 'Pet Supplies'}</option>
+                  <option value="apparel">{lang === 'zh' ? '服装美妆 (Apparel & Fashion) - 默认' : 'Apparel & Fashion (Default)'}</option>
+                  <option value="home">{lang === 'zh' ? '家居生活 (Home & Living)' : 'Home & Living'}</option>
+                  <option value="digital">{lang === 'zh' ? '数码3C (Electronics & Digital)' : 'Electronics & Digital'}</option>
+                  <option value="services">{lang === 'zh' ? '软件服务 (Services & Subscriptions)' : 'Services & Subscriptions'}</option>
+                  <option value="sports">{lang === 'zh' ? '户外运动 (Sports & Outdoors)' : 'Sports & Outdoors'}</option>
+                  <option value="beauty">{lang === 'zh' ? '美妆护肤 (Beauty & Skincare)' : 'Beauty & Skincare'}</option>
+                  <option value="baby">{lang === 'zh' ? '母婴玩具 (Mother & Baby)' : 'Mother & Baby'}</option>
+                  <option value="auto">{lang === 'zh' ? '汽车配件 (Automotive & Accessories)' : 'Automotive & Accessories'}</option>
+                  <option value="jewelry">{lang === 'zh' ? '珠宝手表 (Watches & Jewelry)' : 'Watches & Jewelry'}</option>
+                  <option value="food">{lang === 'zh' ? '食品饮料 (Food & Groceries)' : 'Food & Groceries'}</option>
                 </select>
               </div>
 
@@ -2894,16 +2894,16 @@ export default function DashboardPage() {
                   className="w-full px-4 py-2.5 bg-input-bg border border-input-border rounded-xl focus:border-blue-500 outline-none text-sm text-text-heading"
                   required
                 >
-                  <option value="apparel">{lang === 'zh' ? '服装 (Apparel & Fashion) - 默认' : 'Apparel & Fashion (Default)'}</option>
-                  <option value="digital">{lang === 'zh' ? '数码 (Electronics & Digital)' : 'Electronics & Digital'}</option>
-                  <option value="home">{lang === 'zh' ? '家居 (Home & Living)' : 'Home & Living'}</option>
-                  <option value="services">{lang === 'zh' ? '服务 (Services & Subscriptions)' : 'Services & Subscriptions'}</option>
-                  <option value="beauty">{lang === 'zh' ? '美妆 (Beauty & Personal Care)' : 'Beauty & Personal Care'}</option>
-                  <option value="baby">{lang === 'zh' ? '母婴 (Baby & Toys)' : 'Baby & Toys'}</option>
-                  <option value="sports">{lang === 'zh' ? '运动 (Sports & Outdoors)' : 'Sports & Outdoors'}</option>
-                  <option value="food">{lang === 'zh' ? '食品 (Food & Beverages)' : 'Food & Beverages'}</option>
-                  <option value="auto">{lang === 'zh' ? '汽车 (Automotive & Accessories)' : 'Automotive & Accessories'}</option>
-                  <option value="pets">{lang === 'zh' ? '宠物 (Pet Supplies)' : 'Pet Supplies'}</option>
+                  <option value="apparel">{lang === 'zh' ? '服装美妆 (Apparel & Fashion) - 默认' : 'Apparel & Fashion (Default)'}</option>
+                  <option value="home">{lang === 'zh' ? '家居生活 (Home & Living)' : 'Home & Living'}</option>
+                  <option value="digital">{lang === 'zh' ? '数码3C (Electronics & Digital)' : 'Electronics & Digital'}</option>
+                  <option value="services">{lang === 'zh' ? '软件服务 (Services & Subscriptions)' : 'Services & Subscriptions'}</option>
+                  <option value="sports">{lang === 'zh' ? '户外运动 (Sports & Outdoors)' : 'Sports & Outdoors'}</option>
+                  <option value="beauty">{lang === 'zh' ? '美妆护肤 (Beauty & Skincare)' : 'Beauty & Skincare'}</option>
+                  <option value="baby">{lang === 'zh' ? '母婴玩具 (Mother & Baby)' : 'Mother & Baby'}</option>
+                  <option value="auto">{lang === 'zh' ? '汽车配件 (Automotive & Accessories)' : 'Automotive & Accessories'}</option>
+                  <option value="jewelry">{lang === 'zh' ? '珠宝手表 (Watches & Jewelry)' : 'Watches & Jewelry'}</option>
+                  <option value="food">{lang === 'zh' ? '食品饮料 (Food & Groceries)' : 'Food & Groceries'}</option>
                 </select>
               </div>
 
