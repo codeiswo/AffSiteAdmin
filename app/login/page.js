@@ -38,7 +38,7 @@ export default function LoginPage() {
 
   useEffect(() => {
     // Theme initialization (defaulting to light)
-    const storedTheme = localStorage.getItem('sitespro_theme');
+    const storedTheme = localStorage.getItem('affsite_theme');
     const initialDark = storedTheme === 'dark';
     setIsDark(initialDark);
     if (initialDark) {
@@ -48,14 +48,14 @@ export default function LoginPage() {
     }
 
     // Language initialization (defaulting to Chinese 'zh')
-    const storedLang = localStorage.getItem('sitespro_lang');
+    const storedLang = localStorage.getItem('affsite_lang');
     setLang(storedLang === 'en' ? 'en' : 'zh');
   }, []);
 
   const toggleTheme = () => {
     const nextDark = !isDark;
     setIsDark(nextDark);
-    localStorage.setItem('sitespro_theme', nextDark ? 'dark' : 'light');
+    localStorage.setItem('affsite_theme', nextDark ? 'dark' : 'light');
     if (nextDark) {
       document.documentElement.classList.add('dark');
     } else {
@@ -66,7 +66,7 @@ export default function LoginPage() {
   const toggleLang = () => {
     const nextLang = lang === 'zh' ? 'en' : 'zh';
     setLang(nextLang);
-    localStorage.setItem('sitespro_lang', nextLang);
+    localStorage.setItem('affsite_lang', nextLang);
   };
 
   const handleLogin = async (e) => {
@@ -130,7 +130,7 @@ export default function LoginPage() {
             <Droplets className="w-7 h-7 text-white" />
           </div>
           <h1 className="text-3xl font-bold tracking-tight bg-gradient-to-r from-text-heading to-text-muted bg-clip-text text-transparent">
-            {lang === 'zh' ? 'SitesPro 管理控制台' : 'SitesPro Admin'}
+            {lang === 'zh' ? 'AffSite 管理控制台' : 'AffSite Admin'}
           </h1>
           <p className="text-sm text-text-muted mt-2">
             {t('branding_desc')}

@@ -17,7 +17,7 @@ export const config = {
 };
 
 export async function middleware(request) {
-  const token = request.cookies.get('sitespro_token')?.value;
+  const token = request.cookies.get('affsite_token')?.value;
 
   if (!token) {
     return NextResponse.redirect(new URL('/login', request.url));
@@ -27,7 +27,7 @@ export async function middleware(request) {
   if (!payload) {
     // Clear invalid cookie and redirect to login
     const response = NextResponse.redirect(new URL('/login', request.url));
-    response.cookies.delete('sitespro_token');
+    response.cookies.delete('affsite_token');
     return response;
   }
 

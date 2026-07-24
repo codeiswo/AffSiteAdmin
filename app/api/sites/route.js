@@ -46,7 +46,7 @@ export async function POST(request) {
       seo_description: seo_description.trim(),
       d1_database_id: data.d1_database_id || null,
       pages_project_name: pagesProjectName,
-      template: template || 'sitespro',
+      template: template || 'affsite',
       email_forwarding: email_forwarding ? 1 : 0,
       paypal_client_id: paypal_client_id || '',
       paypal_client_secret: paypal_client_secret || '',

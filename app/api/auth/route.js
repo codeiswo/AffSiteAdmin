@@ -26,7 +26,7 @@ export async function POST(request) {
     const response = NextResponse.json({ success: true });
     response.headers.set(
       'Set-Cookie',
-      `sitespro_token=${token}; Path=/; HttpOnly; SameSite=Lax; Max-Age=${60 * 60 * 24 * 7}`
+      `affsite_token=${token}; Path=/; HttpOnly; SameSite=Lax; Max-Age=${60 * 60 * 24 * 7}`
     );
 
     return response;
@@ -40,7 +40,7 @@ export async function DELETE() {
   const response = NextResponse.json({ success: true });
   response.headers.set(
     'Set-Cookie',
-    'sitespro_token=; Path=/; HttpOnly; SameSite=Lax; Max-Age=0'
+    'affsite_token=; Path=/; HttpOnly; SameSite=Lax; Max-Age=0'
   );
   return response;
 }

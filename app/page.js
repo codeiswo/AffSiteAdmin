@@ -97,7 +97,7 @@ const translations = {
     realtime_polling: "正在实时同步 GitHub Actions 编译部署状态...",
     fetched_from_db: "历史日志拉取自管理器 D1 数据库。",
     no_logs: "该站点暂无部署日志，点击部署按钮开始发布。",
-    loading_panel: "正在载入 SitesPro 控制面板...",
+    loading_panel: "正在载入 AffSite 控制面板...",
     logout_confirm: "确定要退出登录吗？",
     delete_account_confirm: "删除此账号会移出其凭证，但不会删除已生成的 Cloudflare D1/Pages 资源。确认删除？",
     delete_site_confirm: "确认要删除此站点的配置信息吗？相应的部署日志也将被清除。",
@@ -171,7 +171,7 @@ const translations = {
     realtime_polling: "Real-time polling active. Waiting for GitHub Actions completion...",
     fetched_from_db: "Log history fetched from manager database.",
     no_logs: "No deploy logs found for this site. Click Deploy to start.",
-    loading_panel: "Loading SitesPro Panel...",
+    loading_panel: "Loading AffSite Panel...",
     logout_confirm: "Are you sure you want to logout?",
     delete_account_confirm: "Deleting this account will remove its credentials from the manager. Existing Cloudflare deployments won't be deleted. Proceed?",
     delete_site_confirm: "Are you sure you want to delete this site configuration? Deployment history will be removed.",
@@ -631,7 +631,7 @@ export default function DashboardPage() {
     fetchData();
 
     // Theme initialization (defaulting to light)
-    const storedTheme = localStorage.getItem('sitespro_theme');
+    const storedTheme = localStorage.getItem('affsite_theme');
     const initialDark = storedTheme === 'dark';
     setIsDark(initialDark);
     if (initialDark) {
@@ -641,7 +641,7 @@ export default function DashboardPage() {
     }
 
     // Language initialization (defaulting to Chinese 'zh')
-    const storedLang = localStorage.getItem('sitespro_lang');
+    const storedLang = localStorage.getItem('affsite_lang');
     setLang(storedLang === 'en' ? 'en' : 'zh');
     setMounted(true);
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -650,7 +650,7 @@ export default function DashboardPage() {
   const toggleTheme = () => {
     const nextDark = !isDark;
     setIsDark(nextDark);
-    localStorage.setItem('sitespro_theme', nextDark ? 'dark' : 'light');
+    localStorage.setItem('affsite_theme', nextDark ? 'dark' : 'light');
     if (nextDark) {
       document.documentElement.classList.add('dark');
     } else {
@@ -661,7 +661,7 @@ export default function DashboardPage() {
   const toggleLang = () => {
     const nextLang = lang === 'zh' ? 'en' : 'zh';
     setLang(nextLang);
-    localStorage.setItem('sitespro_lang', nextLang);
+    localStorage.setItem('affsite_lang', nextLang);
   };
 
   // Poll status of deploying sites every 5 seconds
@@ -742,7 +742,7 @@ export default function DashboardPage() {
         accent_color: '#00b4d8',
         seo_title: '',
         seo_description: '',
-        template: 'sitespro',
+        template: 'affsite',
         email_forwarding: 0,
         paypal_client_id: '',
         paypal_client_secret: '',
@@ -768,7 +768,7 @@ export default function DashboardPage() {
       accent_color: site.accent_color || '#00b4d8',
       seo_title: site.seo_title || '',
       seo_description: site.seo_description || '',
-      template: site.template || 'sitespro',
+      template: site.template || 'affsite',
       email_forwarding: site.email_forwarding || 0,
       r2_storage_mode: site.r2_storage_mode || 'default_r2',
       paypal_client_id: site.paypal_client_id || '',
@@ -1207,7 +1207,7 @@ export default function DashboardPage() {
           </div>
           <div>
             <h1 className="font-bold text-lg leading-none bg-gradient-to-r from-text-heading to-text-muted bg-clip-text text-transparent">
-              SitesPro
+              AffSite
             </h1>
             <span className="text-[10px] text-text-muted font-semibold tracking-wider uppercase">
               {t('control_panel')}

@@ -223,8 +223,8 @@ export async function POST(request, { params }) {
       
       const githubToken = (await getMgrSetting('github_token')) || process.env.GITHUB_TOKEN || '';
       const githubOwner = (await getMgrSetting('github_owner')) || 'codeiswo';
-      // 模板项目名称使用所选的 template，无则使用系统配置默认的 github_repo
-      const githubRepo = site.template || (await getMgrSetting('github_repo')) || 'AffSite';
+      // 模板项目 GitHub 代码仓库使用配置的 github_repo，默认 AffSite
+      const githubRepo = (await getMgrSetting('github_repo')) || 'AffSite';
 
       const requestUrl = new URL(request.url);
       const callbackUrl = `${requestUrl.protocol}//${requestUrl.host}/api/deploy-callback`;
